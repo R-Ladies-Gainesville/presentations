@@ -17,3 +17,5 @@ knitr::opts_chunk$set(echo = TRUE)
 <https://zenodo.org/>
 
 # What is a DOI
+
+# Why would you want to make your code citable?
