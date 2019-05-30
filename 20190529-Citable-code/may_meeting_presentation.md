@@ -8,6 +8,8 @@ May 2019
   - <https://guides.github.com/activities/citable-code/>
   - <https://fairsharing.org/>
   - <https://www.re3data.org/>
+      - This one is more for data, but can also include code.
+      - This one is a good source for publishing your data sets.
   - <https://zenodo.org/>
   - <http://help.osf.io/m/addons/l/863982-connect-gitlab-to-a-project>
   - <https://choosealicense.com/>
@@ -45,3 +47,34 @@ thread.
   - A more stats-related
         approach:
       - <https://academia.stackexchange.com/questions/28690/when-does-a-statistical-consultant-become-a-co-author-or-collaborator/113924#113924>
+
+# Summary points from the discussion with the group
+
+  - Making data available and citable is valuable.
+  - Difference between sharing raw data vs. clean data.
+  - When you don’t own the data, but want to cite the code used to work
+    with it:
+      - Use simulated data or data with a simlar structure
+      - R packages that can help:
+        [charlatan](https://github.com/ropensci/charlatan) and
+        [wakefield](https://github.com/trinker/wakefield)
+  - We can all agree that having authorship discussions at the beginning
+    is the best practice, but this doesn’t always happen:
+      - Friends or relatives asking for last minute help, join a sinking
+        boat
+      - Get on board with a project after a paper is rejected or
+        addresses reviews
+      - **most common** when graduate students need help last minute
+        with their statistical analysis
+          - This last situation tends to be problematic too because it
+            doesn’t involve an actual manuscript, but a thesis or
+            dissertation with the *promise* of a manuscript. Also, based
+            on personal experiences, the students don’t always have a
+            great motivation to tell their PI of the help they receive
+            from the stats/coding person
+  - Communication is **key** and some people are easier to talk to than
+    others.
+      - Don’t write code on shared folders like Dropbox
+      - Familiarize yourself and collaborators with GitHub or GitLab and
+        share code this way instead. It gives a clearer picture of who’s
+        written the code and contributed to it.
