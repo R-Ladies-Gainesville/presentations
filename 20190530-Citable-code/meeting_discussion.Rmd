@@ -1,0 +1,19 @@
+---
+title: "Discussion"
+author: "Javiera Rudolph"
+date: "5/29/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Potential Discussion Points
+
+ - Share your horror stories
+   - collaborating with other people's code or data
+ - Authorship guidelines
+  - None of them include coding guidelines
+ - Data analysis is more than just one category
+  -

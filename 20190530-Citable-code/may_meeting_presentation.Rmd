@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
  - <https://guides.github.com/activities/citable-code/>
  - <https://fairsharing.org/>
  - <https://www.re3data.org/>
+    - This one is more for data, but can also include code.
+    - This one is a good source for publishing your data sets.
  - <https://zenodo.org/>
  - <http://help.osf.io/m/addons/l/863982-connect-gitlab-to-a-project>
  - <https://choosealicense.com/>
@@ -44,3 +46,9 @@ Most of these links are actually collected from the initial Twitter thread.
     - <https://swampthingecology.org/authorship.html>
  - A more stats-related approach:
     - <https://academia.stackexchange.com/questions/28690/when-does-a-statistical-consultant-become-a-co-author-or-collaborator/113924#113924>
+    
+    
+# Generating/Simulating data for your code
+ - When you don't own the data, but want to cite the code used to work with a similar structure data.
+    - charlatan
+    - wakefield
