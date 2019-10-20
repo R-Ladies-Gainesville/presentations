@@ -1,0 +1,223 @@
+---
+title: "Learning R"
+output: learnr::tutorial
+runtime: shiny_prerendered
+author: Amy Kendig
+some content from: https://github.com/Open-Data-Science-at-SIO/EYH-workshop-2017 (Jessica Carrière-Garwood, Lynn Waterhouse, Hao Ye)
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(RCurl)
+library(ggplot2)
+
+knitr::opts_chunk$set(echo = FALSE)
+
+dos <- 2
+pie <- 3.14
+apple <- 12
+calculate <- function(x) {
+  y <- (x + 15) * 11 / 8
+  return(y)
+}
+
+thanksgiving_pies <- read.csv(text=getURL("https://raw.githubusercontent.com/aekendig/RLadies-Gainesville-FL/master/20191021-Intro2R/Intro2R_RLadiesGNV/data/thanksgiving-pies-2015.csv"))
+
+total <- sum(thanksgiving_pies$count)
+```
+
+```{r pie-percent, include=FALSE}
+thanksgiving_pies$percent <- thanksgiving_pies$count/total*100
+```
+
+
+## Welcome to R!
+We will begin working in R using this special interactive mode. In the future, you'll type directly into RStudio, but this is a good way to get comfortable with the R language. This interactive mode, which is powered by a package called "learnr", allows you to respond to questions. 
+
+Let's get started!
+
+
+## R is a calculator (and more)
+At the most basic level, R operates just a like a calculator. Try entering a mathematical expression below, such as 2+2 and press "Run Code".
+
+```{r 2+2, exercise=TRUE}
+
+```
+
+Below the code is the output. In RStudio, you'd see this in the Console.
+
+R is a pretty smart calculator. For example, we can assign a value to a letter or word and R will remember it for us. Use the code that we've provided below to assign the value 2 to the Spanish word "dos". When you run the code, there won't be any output.
+
+```{r dos, exercise=TRUE, exercise.eval=TRUE}
+dos <- 2
+```
+
+Now, we'll ask R what dos is. In the box, type dos and run the code (R may even offer to help complete your answer as you're typing):
+
+```{r dos recall, exercise=TRUE}
+
+```
+
+Notice that R is case-sensitive (i.e., a lowercase letter is different than an uppercase letter). Try pressing "Start Over" in the box above and type in Dos with an uppercase "D". What happens?
+
+We can use the word "dos" whenever we want to use the number 2. Use R to figure out what dos + dos is:
+
+```{r using dos, exercise=TRUE}
+
+```
+
+You can use any combinations of words or letters as long as there are no spaces in between. For example, this works:
+
+```{r variable_combo, exercise=TRUE}
+I_love_horses <- 55
+I_love_horses
+```
+
+This doesn't (note that you'll have to press "Run Document" againe when this fails):
+
+```{r variable combo, exercise=TRUE}
+I love horses <- 55
+I love horses
+```
+
+## Hashtag #ILoveR
+If you look back at your RStudio window, you'll notice that there are a lot of hashtags or pound signs (this symbol: #). Hashtags tell R: "Please don't read this as code" and can be useful for explaining to someone else what your code does. For example:
+
+```{r hashtag, exercise=TRUE}
+# save the number 3.14 as the word pie
+pie <- 3.14
+```
+
+Run the above code if you didn't already.
+
+We call this a "comment".
+Try writing your own comment for the code section below.
+
+```{r comment, exercise=TRUE}
+
+apple <- 12
+```
+
+What's apple x pie (hint: use * for multiplication)?
+
+```{r apple pie, exercise=TRUE}
+
+```
+
+## Functions
+Sometimes, we want to repeat the same calculation or manipulation with multiple numbers or datasets. Functions make this easier. Functions take an input, change it, and provide an output. Let's work through an example.
+
+Say that you want a function that takes a number, adds 15, multiplies by 11, and divides by 8. We'll name the function "calculate". This is how we would write that function (run the code):
+
+```{r function, exercise=TRUE}
+calculate <- function(x) {
+  y <- (x + 15) * 11 / 8
+  return(y)
+}
+```
+
+Take a second to look at the structure of the function.   
+1. "calculate" is assigned as a function with the function "function"  
+2. x is the input. You could use any word or letter here. You can even list multiple with commas.  
+3. y is returned at the end because it's the output
+
+To run the function, we need to give it an input (the value for x). Let's try it with 10:
+
+```{r function input, exercise=TRUE}
+calculate(10)
+```
+
+Now you try it for another number:
+
+```{r function input 2, exercise=TRUE}
+
+```
+
+## Packages 
+Packages are groups of functions that work well together, like a toolbox with many tools inside. We use the function "library" to load packages. Let's load the package "ggplot2", which is good for visualizing data:
+
+```{r packages, exercise=TRUE}
+library(ggplot2)
+```
+
+Sometimes you'll see an output, such as information about the package, sometimes not. You can usually ignore it.
+
+## It's data time
+Now, let's practice working with some data. 
+
+Often, we type data into a program like Excel. We have to then import it into R to work with it. The code below imports data on the types of pies people eat at Thanksgiving. The file is stored in the "data" folder.
+
+Normally, we would import data from a file on our computer in a format that specifies the file path. Here's an example, but we're not going to run it because the learnr package doesn't allow this.
+
+```{r import data folder, exercise=TRUE}
+# Mac user
+# thanksgiving_pies <- read.csv("/Users/Username/Desktop/Intro2R_RLadiesGNV/data/thanksgiving-pies-2015.csv")
+
+# Windows user
+# thanksgiving_pies <- read.csv("C:/Users/Username/Desktop/Intro2R_RLadiesGNV/data/thanksgiving-pies-2015.csv")
+```
+
+We can import data from a URL with the learnr package, so that is what we'll do here:
+
+```{r import data, exercise=TRUE}
+thanksgiving_pies <- read.csv(text=getURL("https://raw.githubusercontent.com/aekendig/RLadies-Gainesville-FL/master/20191021-Intro2R/Intro2R_RLadiesGNV/data/thanksgiving-pies-2015.csv"))
+```
+
+We call data tables like this "dataframes". Let's look at the top of our dataframe:
+
+```{r head, exercise=TRUE}
+head(thanksgiving_pies)
+```
+
+The dataframe has two columns: pie_type and count (the number of people who chose that pie as their preferred type in a survey). 
+
+R assumes pie_type is a categorical variable (also known as a "factor" in R). This is indicated by "fctr" under the column name. R assumes count is an integer, which is indicated by "int".
+
+In order to look at one column, we use a dollar sign ($). Let's look at the column of pie types:
+
+```{r columns, exercise=TRUE}
+thanksgiving_pies$pie_type
+```
+
+At the bottom of the output, there's a list of "levels". This is because the column is a factor.
+
+Now it's your turn. Tell R to print the column for "count" using the dollar sign:
+
+```{r columns 2, exercise=TRUE}
+
+```
+
+We can use R's "calculator capabilities" to manipulate the dataframe. For example, let's say we want the percentage of people rather than the count. First, let's calculate the total number of people who answered the survey by adding up all of the counts and assigning the value to the word "total":
+
+```{r total, exercise=TRUE}
+total <- sum(thanksgiving_pies$count)
+total
+```
+
+Next, we divide each count by the total and multiply by 100 to get the percent. We'll save this as a new column called "percent":
+
+```{r percent, exercise=TRUE}
+thanksgiving_pies$percent <- thanksgiving_pies$count/total*100
+thanksgiving_pies$percent
+```
+
+Now, let's look at the percentage of people who prefer each pie type by making a plot:
+
+```{r plot, exercise=TRUE, exercise.setup="pie-percent"}
+ggplot(thanksgiving_pies, aes(x = pie_type, y = percent)) +
+  geom_bar(stat = "identity") 
+```
+
+Let's walk through the different pieces of that code.  
+1. We use the function ggplot to make our plot.   
+2. We tell R that the dataframe is thanksgiving_pies.  
+3. We use different parts of that dataframe to make the plot: pie_type is on the x-axis and percent is on the y-axis.   
+4. We tell R that we want to make a bar chart (geom_bar(stat = "identity"), the stat = "identity" part is specific to bar charts).
+
+Try making a similar plot with "count" on the y-axis. You are encouraged to copy, paste, and edit code:
+
+```{r plot 2, exercise=TRUE, exercise.setup="pie-percent"}
+
+```
+
+There are lots of ways you may want to tweak this graph, and the ggplot2 packages offers a lot of flexibility. We'll get into more data visualization later.

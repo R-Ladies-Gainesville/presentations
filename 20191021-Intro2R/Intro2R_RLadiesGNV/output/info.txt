@@ -1,0 +1,1 @@
+This folder can hold your output from your R code. 
