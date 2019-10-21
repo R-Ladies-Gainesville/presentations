@@ -3,7 +3,7 @@ Official repo for the R Ladies Gainesville Florida chapter. Includes presentatio
 
 ## Oct 21, 2019 - [Amy Kendig](https://github.com/aekendig) and Javi Rudolph 
 ### Intro to R
-Haven't used R, or want a quick refresher? You can access the presentation we showed [here](https://speakerdeck.com/javirudolph/intro2r-rladiesgnv) and the interactive R lesson can be downloaded from this link **add the link**.
+Haven't used R, or want a quick refresher? You can access the presentation we showed [here](https://speakerdeck.com/javirudolph/intro2r-rladiesgnv) and the interactive R lesson can be downloaded from this [link](https://tinyurl.com/Intro2R-RLadiesGNV).
 
 
 ## May 29, 2019 - R Ladies organizers
