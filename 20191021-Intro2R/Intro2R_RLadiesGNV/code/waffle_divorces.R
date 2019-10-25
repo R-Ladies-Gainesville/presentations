@@ -16,6 +16,7 @@ rm(list = ls())
 library(ggplot2)
 library(dplyr)
 library(tidyr)
+library(maps)
 
 # import data
 waffle <- read.csv("./data/Waffle-House-divorces.csv")
