@@ -1,6 +1,9 @@
 # RLadies-Gainesville-FL
 Official repo for the R Ladies Gainesville Florida chapter. Includes presentations and other resources discussed in meetings.
 
+## Dec 3, 2019 - [Brittany Bankovich](https://www.linkedin.com/in/brittany-bankovich-77805290/)
+### Spatial R - Introductory workshop.
+
 ## Nov 12, 2019 - [Amy Kendig](https://github.com/aekendig/docker-rstudio-tutorial)
 ### Reproducible research with RStudio and Docker
 Interested in learning about reproducible research? Amy learned what she is teaching us today from a workshop with [CyberCarpentry](http://cybercarpentry.web.unc.edu/), check it out! You can also check out the presentation she used and the tutorial [here](https://github.com/aekendig/docker-rstudio-tutorial/blob/master/Docker_RLadies_Nov2019.pdf)
