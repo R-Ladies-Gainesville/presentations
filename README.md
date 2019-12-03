@@ -3,6 +3,7 @@ Official repo for the R Ladies Gainesville Florida chapter. Includes presentatio
 
 ## Dec 3, 2019 - [Brittany Bankovich](https://www.linkedin.com/in/brittany-bankovich-77805290/)
 ### Spatial R - Introductory workshop.
+The files for the workshop are located [here](https://dev.azure.com/KristenSauby/GIS_in_R_workshop/_git/GIS_in_R?path=%2F&version=GBmaster), the data files are somewhat heavy so we recommend that you download them from the link above. However, the R script can be found in this [repo](), and you can follow [Brittany](https://twitter.com/SuperModelR) on Twitter.
 
 ## Nov 12, 2019 - [Amy Kendig](https://github.com/aekendig/docker-rstudio-tutorial)
 ### Reproducible research with RStudio and Docker
