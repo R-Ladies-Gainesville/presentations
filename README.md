@@ -1,6 +1,10 @@
 # RLadies-Gainesville-FL
 Official repo for the R Ladies Gainesville Florida chapter. Includes presentations and other resources discussed in meetings.
 
+## Feb 27, 2020 - [RStudio::conf 2020](https://github.com/rstudio-conf-2020)
+### Recap of the conference by [Kristen Sauby] (https://dev.azure.com/KristenSauby/_git/RStudioConf2020?path=%2Fpres.pdf&version=GBmaster)  
+
+
 ## Dec 3, 2019 - [Brittany Bankovich](https://www.linkedin.com/in/brittany-bankovich-77805290/)
 ### Spatial R - Introductory workshop.
 The files for the workshop are located [here](https://dev.azure.com/KristenSauby/GIS_in_R_workshop/_git/GIS_in_R?path=%2F&version=GBmaster), the data files are somewhat heavy so we recommend that you download them from the link above, and you can follow [Brittany](https://twitter.com/SuperModelR) on Twitter.
