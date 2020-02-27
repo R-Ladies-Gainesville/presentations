@@ -2,7 +2,7 @@
 Official repo for the R Ladies Gainesville Florida chapter. Includes presentations and other resources discussed in meetings.
 
 ## Feb 27, 2020 - [RStudio::conf 2020](https://github.com/rstudio-conf-2020)
-### Recap of the conference by [Kristen Sauby] (https://dev.azure.com/KristenSauby/_git/RStudioConf2020?path=%2Fpres.pdf&version=GBmaster)  
+### Recap of the conference by [Kristen Sauby](https://dev.azure.com/KristenSauby/_git/RStudioConf2020?path=%2Fpres.pdf&version=GBmaster)  
 
 
 ## Dec 3, 2019 - [Brittany Bankovich](https://www.linkedin.com/in/brittany-bankovich-77805290/)
