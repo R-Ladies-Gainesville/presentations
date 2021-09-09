@@ -8,7 +8,7 @@
 ## if you don't have them already, install packages
 install.packages("tidyverse")
 install.packages("remotes")
-remotes::install_github("allisonhorst/palmerpenguins")
+install.packages("palmerpenguins")
 
 ## load packages
 library(tidyverse) 
