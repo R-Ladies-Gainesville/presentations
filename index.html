@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Creating and Sharing R Tutorials</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Amy Kendig" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Creating and Sharing R Tutorials
+## Virtual presentation
+### Amy Kendig
+### R-Ladies Gainesville
+### 2022/01/28
+
+---
+
+class: inverse, center
+background-image: url(tutorial_template_files/RladiesGNVLogo.png)
+background-size: 100px
+background-position: 10% 90%
+
+# Creating and Sharing R Tutorials
+
+## Welcome to R-Ladies Gainesville!
+
+### While we're waiting to start, what R tutorials have you found useful? Put the link in the chat.
+
+.footnote[ Note: This meeting will be recorded. Please turn off your video and edit your name (e.g., to R-Ladies Member) if you do not wish to be recorded.]
+
+---
+# useR! 2022 Conference
+
+.pull-left[
+
+Virtual conference for R users and developers. 
+
+**Important Dates**
+- Tutorials (2-3 hr, $500 payment): Feb 22
+- Abstracts (talk/panel/poster): March 1
+- Early registration: March 1-April 30
+- Regular registration: May 1-June 20
+- Conference: June 20-23
+
+&lt;https://user2022.r-project.org/&gt;
+
+]
+
+.pull-right[![useR!2022](tutorial_template_files/user2022conf.png)]
+
+---
+class: center, middle
+background-image: url(tutorial_template_files/pawel-czerwinski-KjujL_Avm_8-unsplash.jpg)
+background-size: cover
+
+# Introductions
+
+**Name**
+
+**Pronouns**
+
+**How do you use or plan to use R?**
+
+.footnote[Photo by &lt;a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Pawel Czerwinski&lt;/a&gt; on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;]
+
+---
+
+# What makes a good R tutorial?
+
+An R tutorial can come in many forms -- a blog post, a package vignette, a formal course, etc. 
+
+In your breakout group,
+* What R tutorials have you found useful?
+  + Share links!
+* What characteristics make them accessible?
+  + Identify **3** to share with the larger group.
+
+---
+
+# What makes a good R tutorial?
+
+### Resources
+
+* Curriculum Development Guide from The Carpentries
+  + &lt;https://carpentries.github.io/curriculum-development/&gt;
+  + Who's the learner?
+  + What practical skills do you want them to learn?
+  + Narrative, code chunks, and exercises
+  + Cognitive load
+* Choosing Topics from R-Bloggers
+  + &lt;https://www.r-bloggers.com/2020/10/picking-and-researching-blog-topics-about-r-package-development/&gt;
+  + Your own work
+  + Email lists and forums
+  + Twitter
+* Others??
+
+---
+background-image: url(tutorial_template_files/r-mo-fPbDggoRaQA-unsplash.jpg)
+background-size: cover
+
+# Why create R tutorials?
+
+* Learn new skills
+* Build a portfolio
+* Practice communication
+* Productive procrastination
+* Give back to the R community
+
+.footnote[ Modified from Rebecca Barter's blog: &lt;https://www.rebeccabarter.com/blog/2020-02-03_blogger/&gt;. Photo by &lt;a href="https://unsplash.com/@mooo3721?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;R Mo&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/writing?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;]
+
+---
+
+# R-Ladies Gainesville Tutorial Series
+
+#### What:
+* A website of R tutorials created by our members.
+
+--
+
+#### Why:
+* Opportunity for R-Ladies to gain the benefits of creating their own tutorials without having to maintain their own blogs.
+* Central location to reference previous meetings.
+* Make R-Ladies content available to everyone.
+
+--
+
+#### How:
+* Sign up for an R-Ladies Gainesville meeting
+* Use the Tutorial Template (or another method) to create your tutorial
+* Share your tutorial at a meeting to get feedback
+  + Review other members' tutorials
+* Post your tutorial on the R-Ladies Gainesville website
+
+---
+
+.pull-left[
+
+# Tutorial Template
+
+## Contents
+
+**Editing the template**
+
+**Examples**
+
+**&gt; Dataset**
+
+**&gt; Code**
+
+**&gt; Information for reproducibility**
+
+**Sharing your tutorial**
+]
+
+.pull-right[
+&lt;img src="tutorial_template_files/RMarkdownScreenshot.png" width="1287" /&gt;&lt;img src="tutorial_template_files/MarkdownScreenshot.png" width="1524" /&gt;
+]
+
+---
+
+# Editing the template
+
+Website: &lt;https://github.com/R-Ladies-Gainesville/tutorials&gt;
+
+Clone repository or download ZIP (click `Code`).
+
+Open `tutorial_template.Rmd` in RStudio.
+
+Edit the metadata at the top with your name.
+
+---
+
+# Examples
+
+We want our examples to be **informative** and **reproducible**. Consider the audience, your learning objectives, and your narrative when writing examples.
+
+Components:
+- Problem or goal
+- Dataset
+- Solution code
+- Information for reproducibility
+
+---
+
+# Dataset
+
+**Create-your-own:**
+
+
+```r
+x &lt;- c(1, 5, 9, 10)
+
+set.seed(20)
+y &lt;- rnorm(4)
+```
+
+--
+
+**Built-in:**
+
+
+```r
+# data() # commented out to avoid data list loading
+
+head(iris)
+```
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+```
+
+---
+
+# Dataset
+
+Another great example dataset is 'penguins'
+
+```r
+# install the package if it's not already installed
+if(!("palmerpenguins" %in% installed.packages()[,"Package"]))
+  install.packages("palmerpenguins")
+
+# load package
+library(palmerpenguins)
+
+# show data
+head(penguins)
+```
+
+```
+## # A tibble: 6 × 8
+##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex  
+##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
+## 1 Adelie  Torge…           39.1          18.7              181        3750 male 
+## 2 Adelie  Torge…           39.5          17.4              186        3800 fema…
+## 3 Adelie  Torge…           40.3          18                195        3250 fema…
+## 4 Adelie  Torge…           NA            NA                 NA          NA &lt;NA&gt; 
+## 5 Adelie  Torge…           36.7          19.3              193        3450 fema…
+## 6 Adelie  Torge…           39.3          20.6              190        3650 male 
+## # … with 1 more variable: year &lt;int&gt;
+```
+
+---
+
+# Solution code
+
+We will use an example from the [palmerpenguins vignette](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) to demonstrate solution code. For this example, the goal is to create a scatterplot for data with different categories.
+
+--
+
+**Load packages** 
+
+We use the code chunk option "message = F" to suppress messages generated when packages load.
+
+```r
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+```
+
+--
+
+**Settings**
+
+Include figure settings, saved variables, and create-your-own datasets.
+
+```r
+theme_set(theme_minimal())
+```
+
+---
+
+# Solution code
+
+**Solution**
+
+Code to create scatterplot.
+
+```r
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species, shape = species), size = 2) +
+  scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
+```
+
+&lt;img src="tutorial_template_files/figure-html/unnamed-chunk-7-1.png" width="40%" /&gt;
+
+---
+
+# Information for reproducibility
+
+Session information
+
+```r
+sessionInfo()
+```
+
+```
+## R version 4.1.1 (2021-08-10)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Big Sur 10.16
+## 
+## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] ggplot2_3.3.5        dplyr_1.0.7          palmerpenguins_0.1.0
+## 
+## loaded via a namespace (and not attached):
+##  [1] pillar_1.6.4     bslib_0.3.0      compiler_4.1.1   jquerylib_0.1.4 
+##  [5] highr_0.9        tools_4.1.1      digest_0.6.29    gtable_0.3.0    
+##  [9] jsonlite_1.7.2   evaluate_0.14    lifecycle_1.0.1  tibble_3.1.6    
+## [13] pkgconfig_2.0.3  png_0.1-7        rlang_0.4.12     cli_3.1.0       
+## [17] DBI_1.1.1        rstudioapi_0.13  yaml_2.2.1       xfun_0.29       
+## [21] fastmap_1.1.0    withr_2.4.3      stringr_1.4.0    knitr_1.36      
+## [25] generics_0.1.1   sass_0.4.0       vctrs_0.3.8      grid_4.1.1      
+## [29] tidyselect_1.1.1 glue_1.5.1       R6_2.5.1         fansi_0.5.0     
+## [33] rmarkdown_2.11   xaringan_0.22    farver_2.1.0     purrr_0.3.4     
+## [37] magrittr_2.0.1   scales_1.1.1     ellipsis_0.3.2   htmltools_0.5.2 
+## [41] assertthat_0.2.1 colorspace_2.0-2 labeling_0.4.2   utf8_1.2.2      
+## [45] stringi_1.7.6    munsell_0.5.0    crayon_1.4.2
+```
+
+---
+
+# Information for reproducibility
+
+RStudio version
+
+```r
+rstudioapi::versionInfo()$version
+```
+
+```
+## [1] '1.4.1717'
+```
+
+---
+
+# Sharing your tutorial
+
+### R-Ladies Meeting
+You're welcome to use and modify these slides as a template. They can be found on the R-Ladies Gainesville Github: 
+
+&lt;https://github.com/R-Ladies-Gainesville/presentations&gt;
+
+You can also share your tutorial at a meeting by walking through the Markdown file.
+
+### Github
+We will use Github to share our tutorials and get feedback. We will have a tutorial on using Github!
+
+---
+
+# Tutorial sign-up
+
+Tutorial presentations can be part or all of a meeting. Meeting times and days are flexible. The R-Ladies organizers are here to help you with your tutorials!
+
+.pull-left[
+### Tutorial ideas:
+* Git/Github
+* Tidyverse series
+  + choose a package
+* Creating a package
+* Making a Shiny app
+* Specific data wrangling strategies
+  + fixing missing values
+  + PDF-to-table
+* Making figures for publication]
+
+.pull-right[
+### In the chat:
+* Name
+* Email
+* Topic (can be TBD)
+* Month(s) available to present
+* We'll follow up for details
+]
+
+.footnote[Note: You can sign-up anytime on our Meetup page &lt;https://www.meetup.com/rladies-gainesville/&gt; under **What we're about**.]
+
+---
+class: inverse, center
+
+# Thank you!
+
+### Contact us at:
+&lt;gainesville@rladies.org&gt;
+[@RLadiesGNV](https://twitter.com/RLadiesGNV)
+
+&lt;img src="tutorial_template_files/RladiesGNVLogo.png" width="40%" /&gt;
+
+.footnote[ 
+This presentation is created with the [xaringan](https://slides.yihui.org/xaringan/#1) package and the RLadies theme by [Alison Hill](https://www.apreshill.com/project/rladies-xaringan/)
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
