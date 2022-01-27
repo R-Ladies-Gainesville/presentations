@@ -28,6 +28,22 @@ background-position: 10% 90%
 .footnote[ Note: This meeting will be recorded. Please turn off your video and edit your name (e.g., to R-Ladies Member) if you do not wish to be recorded.]
 
 ---
+
+.pull-left[![RLadies logo](tutorial_template_files/R-LadiesGlobal.png)]
+
+.pull-right[###Worldwide organization that promotes **diversity** in the **#rstats** community via meetups and mentorhsip in a **friendly** and **safe** environment.
+
+###Our mission:
+
+More women/non-binary
+* coders
+* developers
+* speakers
+* leaders
+
+More awesome people developing R packages and being part of the R community.]
+
+---
 # useR! 2022 Conference
 
 .pull-left[
@@ -283,7 +299,7 @@ rstudioapi::versionInfo()$version
 # Sharing your tutorial
 
 ### R-Ladies Meeting
-You're welcome to use and modify these slides as a template. They can be found on the R-Ladies Gainesville Github: 
+You're welcome to use and modify these slides. They can be found on the R-Ladies Gainesville Github: 
 
 <https://github.com/R-Ladies-Gainesville/presentations>
 
@@ -301,6 +317,7 @@ Tutorial presentations can be part or all of a meeting. Meeting times and days a
 .pull-left[
 ### Tutorial ideas:
 * Git/Github
+* R Markdown presentations
 * Tidyverse series
   + choose a package
 * Creating a package
@@ -316,7 +333,8 @@ Tutorial presentations can be part or all of a meeting. Meeting times and days a
 * Email
 * Topic (can be TBD)
 * Month(s) available to present
-* We'll follow up for details
+
+We'll follow up for details
 ]
 
 .footnote[Note: You can sign-up anytime on our Meetup page <https://www.meetup.com/rladies-gainesville/> under **What we're about**.]
