@@ -185,6 +185,10 @@ Open `tutorial_template.Rmd` in RStudio.
 
 Edit the metadata at the top with your name.
 
+Press `Knit` in RStudio to see the template.
+
+.footnote[Note: The tutorial may have R code you don't recognize. Focus on the template structure, but let us know if the code inhibits you from following the template.]
+
 ---
 
 # Examples
@@ -346,6 +350,7 @@ class: inverse, center
 
 ### Contact us at:
 <gainesville@rladies.org>
+
 [@RLadiesGNV](https://twitter.com/RLadiesGNV)
 
 ```{r echo = F, out.width = "40%"}
